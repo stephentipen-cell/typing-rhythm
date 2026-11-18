@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Type Beat – Typing Rhythm Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>TYPE BEAT</h1>
+  <div class="hud">
+    <div>Score<b id="sc">0</b></div>
+    <div>Combo<b id="cb">0</b></div>
+    <div>Accuracy<b id="ac">100%</b></div>
+  </div>
+</header>
+<main>
+  <canvas id="c"></canvas>
+  <div id="ov">
+    <h2 id="ovT">Type Beat</h2>
+    <p id="ovP">Letters scroll in time with the beat. Press the matching key as each one crosses the ring. Closer to the beat means more points.</p>
+    <div class="opts">
+      <label>BPM <input id="bpm" type="number" min="60" max="200" value="110"></label>
+      <label>First beat (ms) <input id="offset" type="number" min="0" max="2000" step="10" value="0"></label>
+      <label>Letters <select id="density"><option value="1">every beat</option><option value="2" selected>every half beat</option></select></label>
+      <label class="row"><input id="click" type="checkbox" checked> Click track</label>
+      <input id="song" type="file" accept="audio/*">
+      <small id="songName">No song loaded: using the built-in beat</small>
+      <button id="clear" type="button" class="alt hide">Remove song</button>
+    </div>
+    <button id="go">Start (Enter)</button>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
